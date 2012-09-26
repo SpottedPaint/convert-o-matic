@@ -15,12 +15,14 @@ You can see this working in whatever state its in here at http://convert-o-matic
 - It uses '%(thing)' % {'thing':value} rather than .format() because the version of python online is 2.5
 
 The folder structure goes like this 
+<pre>
 /flask_env
 	- all this stuff
 	- log.db // the database
 	- errors.log
 	/tmp
 	 	- restart.txt
+</pre>
 	
 If you want to restart/refresh you can do touch tmp/restart.txt
 
