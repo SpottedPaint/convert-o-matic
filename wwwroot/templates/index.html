@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+	<title>Convert-o-matic</title>
+	<meta name="description" content="" >
+	<meta name="keywords" content="" >
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Happy+Monkey">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+	<meta name="author" content="Adam">
+	<!-- Date: 2012-09-25 -->
+</head>
+<body>
+	<div class="home">
+	<h1>Convert-O-Matic</h1>
+	{% if output.name %}
+	  <h2>{{ output.name }}</h2>
+	{% endif %}
+	
+	<form action="" method="get" accept-charset="utf-8">
+		<label for="question"><!--Question--></label>
+		<p><input type="input" name="question" id="question" value="{{ output.input }}" placeholder="e.g. 345 cm" ></p>
+		<p><input type="submit" id="query" value="Convert &rarr;"></p>
+	</form>
+	
+	<aside>
+		NOTE: This is kind of approximate there is some rounding involved.
+		<br/><small><a href="http://spottedpaint.com">Adam</a> made this and yes he agrees its stupid <a href="/why">so why then?</a></small>
+	</aside>
+
+	<h3>Recently</h3>
+	{% for question, output, userId in output.recent %}
+	    <p class="a{{ loop.index }}" >{{ output|e }}</p>
+	{% endfor %}
+	</div>
+	
+</body>
+</html>
+
+
