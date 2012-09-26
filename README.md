@@ -6,7 +6,11 @@ This is a silly test project because I wanted to learn some python so this is re
 Its built using **Flask** http://flask.pocoo.org/ . 
 The passenger_wsgi.py is built to work on dreamhost with a virtualenv but guess you could tweak to work wherever if you know what your doing.
 
-If you have any issues with hosting python/flask on dreamhost you can check out there wiki entry http://wiki.dreamhost.com/Flask thats what I did. My main issues were with python paths though :) 
+On dreamhost you have to install simplejson for jsonify
+<pre>
+	pip install simplejson
+</pre> 
+If you have any issues with hosting python/flask on dreamhost you can check out their wiki entry http://wiki.dreamhost.com/Flask thats what I did. My main issues were with python paths though :) 
 
 It also uses the very super duper SQLite.
 
